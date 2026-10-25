@@ -9,7 +9,7 @@ description = "Public SDK, CLI, and MCP server for normalized social-media metad
 readme = "README.md"
 license = {text = "Apache-2.0"}
 authors = [
-    {name = "JNHFlow21", email = "JNHFlow21@users.noreply.github.com"}
+    {name = "risingjerry", email = "87055815+risingjerry@users.noreply.github.com"}
 ]
 keywords = [
     "mcp",

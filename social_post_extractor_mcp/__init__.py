@@ -2,7 +2,7 @@
 
 __version__ = "0.4.1"
 __author__ = "risingjerry"
-__email__ = "JNHFlow21@users.noreply.github.com"
+__email__ = "87055815+risingjerry@users.noreply.github.com"
 
 
 def main():
