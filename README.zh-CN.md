@@ -18,7 +18,7 @@
   <img alt="Model Context Protocol 服务器" src="https://img.shields.io/badge/MCP-server-6C47FF.svg">
 </p>
 
-![Social Media Toolkit 架构：公开社交媒体链接通过同一套工具，转换为统一 JSON、逐字稿、媒体和 MCP 工具](docs/assets/social-preview.png)
+![终端演示：socialkit inspect 把公开 YouTube 链接转成统一 JSON，socialkit text --timed 生成带时间码的 SRT 逐字稿（示例数据为虚构）](docs/demo.gif)
 
 > **成熟度：Alpha。** 统一的 `PostBundle` 数据契约已经版本化，但公开平台的页面和接口仍可能随时变化。
 
@@ -348,6 +348,8 @@ npx skills add risingjerry/social-media-toolkit
 - GitHub Releases 提供带版本号的源码包、wheel、npm tarball 和校验文件。
 
 ## 架构与文档
+
+![Social Media Toolkit 架构：公开社交媒体链接通过同一套工具，转换为统一 JSON、逐字稿、媒体和 MCP 工具](docs/assets/social-preview.png)
 
 - [架构与副作用说明](docs/architecture.md)
 - [能力矩阵与限制](docs/capabilities.md)

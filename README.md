@@ -18,7 +18,7 @@
   <img alt="Model Context Protocol server" src="https://img.shields.io/badge/MCP-server-6C47FF.svg">
 </p>
 
-![Social Media Toolkit architecture: public social links flow through one toolkit into normalized JSON, transcripts, media, and MCP tools](docs/assets/social-preview.png)
+![Terminal demo: socialkit inspect turns a public YouTube link into normalized JSON, then socialkit text --timed writes a timed SRT transcript (synthetic example data)](docs/demo.gif)
 
 > **Maturity:** alpha. The normalized `PostBundle` contract is versioned, but public platform pages and endpoints can change without notice.
 
@@ -351,6 +351,8 @@ The downloader accepts HTTP(S), rejects local/private literal IPs, bounds downlo
 - Versioned source distributions, wheels, npm tarballs, and checksums are attached to GitHub Releases.
 
 ## Architecture and documentation
+
+![Social Media Toolkit architecture: public social links flow through one toolkit into normalized JSON, transcripts, media, and MCP tools](docs/assets/social-preview.png)
 
 - [Architecture and side effects](docs/architecture.md)
 - [Capability matrix and limitations](docs/capabilities.md)
