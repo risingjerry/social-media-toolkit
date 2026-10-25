@@ -1,6 +1,6 @@
 # Agent Development Protocol
 
-This repository is a public, reusable product. It must not depend on the Brain vault or any private user workspace.
+This repository is a public, reusable product. It must not depend on any private vault, workspace, or maintainer-specific tooling.
 
 ## Product boundary
 
@@ -31,12 +31,9 @@ This repository is a public, reusable product. It must not depend on the Brain v
 - Never commit, print, log, or paste secret values.
 - Do not ask users to send keys through chat.
 - Do not create or load project `.env` or secret config files.
-- The public runtime must work from standard process environment variables alone. Agent Switch is an optional maintainer integration; never import it or make it a package/runtime requirement.
+- The public runtime must work from standard process environment variables alone.
 - Public documentation may list secret names only and should recommend an OS/client secret manager.
-- On the maintainer machine, Agent Switch is the sole source of truth:
-  - inspect names with `agent-switch secret list`;
-  - run `agent-switch doctor` before MCP configuration changes;
-  - use `agent-switch reconcile` for generated native MCP configuration.
+- Optional maintainer integration: a maintainer may inject these environment variables from their own secret manager (for example Agent Switch). Never import such a tool or make it a package/runtime requirement.
 
 ## Change discipline
 
@@ -63,3 +60,5 @@ git diff --check
 ```
 
 For a release, also run live smoke tests for Douyin, Xiaohongshu, Bilibili, and YouTube. When the test includes text, run configured GetNote and Volcengine ASR without asking for separate authorization. Report side effects, possible charges, and blocked platforms honestly; never weaken tests or fabricate success.
+
+For using the tool (not developing this repo), read `skills/social-media-toolkit/SKILL.md`.

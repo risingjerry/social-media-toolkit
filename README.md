@@ -311,6 +311,22 @@ Do not place secrets in this JSON. Use the client's secret store or secure proce
 | `social_capture_bundle` | Combine normalized data and requested downloads |
 | `social_doctor` | Report dependencies and configuration names without values |
 
+## Use with Claude Code / Codex / other agents
+
+Install the bundled skill so your agent knows the commands, JSON output, and safety rules:
+
+```bash
+npx skills add risingjerry/social-media-toolkit
+```
+
+Manual copy: `cp -R skills/social-media-toolkit ~/.claude/skills/` (Claude Code) or `~/.agents/skills/` (Codex and compatible agents). Or register the MCP server (`social-media-toolkit-mcp`) as shown above. Example prompts:
+
+- "Get the text of this Bilibili video and summarize it: SHARE_URL"
+- "Make a timed transcript of this YouTube video as SRT and Markdown in ./transcripts."
+- "Pull the top 20 public comments of this Douyin post and list the common complaints."
+
+Working on the repo itself? Agents should read [AGENTS.md](AGENTS.md).
+
 ## Trust and boundaries
 
 | Area | Contract |
@@ -357,6 +373,46 @@ git diff --check
 
 Tests use synthetic fixtures and must not contain real cookies, tokens, private media, or user content.
 
+## FAQ
+
+### How do I get the transcript of a YouTube or Bilibili video from the command line?
+
+Run `socialkit text "URL"` for plain text, or `socialkit text "YOUTUBE_URL" --timed --output ./transcripts` for Markdown, SRT, and JSON with source timecodes. It prefers existing subtitles and falls back to Volcengine cloud ASR only when needed.
+
+### How do I extract text or download a video from a Douyin or Xiaohongshu (RedNote) link?
+
+Use `socialkit text "SHARE_URL"` for text and `socialkit download "SHARE_URL" --output ./downloads` for video, cover, and images. Both work from public share links without logging in.
+
+### Can an AI agent read social-media posts without a browser or cookies?
+
+Yes. The CLI and the MCP server read public pages only, so Claude Code, Codex, or any MCP client can call them without a browser profile, cookies, or a logged-in session.
+
+### Does it cost money?
+
+Public metadata, media downloads, and native subtitles are free. Optional routes can cost money: GetNote, the TikHub Douyin fallback, and Volcengine ASR. The result's `provenance` and `warnings` say which route ran.
+
+### Where do I put API keys?
+
+In process environment variables or your MCP client's secret store, never in a project `.env` file. `socialkit doctor` lists the secret names it looks for and never prints values.
+
+### Which platforms are supported, and what about private content?
+
+Douyin, Xiaohongshu, Bilibili, and YouTube public URLs. Private content, account analytics, and publishing are out of scope; you remain responsible for platform terms and copyright.
+
+### Does it support local Whisper or other ASR providers?
+
+No. Volcengine cloud ASR is the only ASR provider, by design.
+
+## Uninstall
+
+```bash
+uv tool uninstall social-media-toolkit
+rm -rf ~/.claude/skills/social-media-toolkit ~/.agents/skills/social-media-toolkit   # if you installed the skill
+rm -f ~/.config/social-media-toolkit/config.json                                      # optional config, if you created it
+```
+
+Remove the `social-media-toolkit` entry from your MCP client config if you added one. Output directories you chose are not touched.
+
 ## Repository activity
 
 [![Repository Pulse for risingjerry/social-media-toolkit](https://raw.githubusercontent.com/risingjerry/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/risingjerry/social-media-toolkit)
@@ -366,3 +422,7 @@ Tests use synthetic fixtures and must not contain real cookies, tokens, private 
 Bug reports and focused feature proposals are welcome through [GitHub Issues](https://github.com/risingjerry/social-media-toolkit/issues). Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and use [GitHub's private vulnerability reporting](https://github.com/risingjerry/social-media-toolkit/security/advisories/new) for security issues.
 
 Licensed under the [Apache License 2.0](LICENSE).
+
+If this saved you time, a star on GitHub helps others find it.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=risingjerry/social-media-toolkit&type=Date)](https://star-history.com/#risingjerry/social-media-toolkit&Date)

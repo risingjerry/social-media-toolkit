@@ -308,6 +308,22 @@ social-media-toolkit-mcp
 | `social_capture_bundle` | 合并统一数据与用户请求的下载内容 |
 | `social_doctor` | 报告依赖和配置名称，不返回配置值 |
 
+## 在 Claude Code / Codex / 其他 Agent 中使用
+
+安装自带的 Skill，让 Agent 知道命令、JSON 输出和安全规则：
+
+```bash
+npx skills add risingjerry/social-media-toolkit
+```
+
+也可以手动复制：`cp -R skills/social-media-toolkit ~/.claude/skills/`（Claude Code）或 `~/.agents/skills/`（Codex 等兼容 Agent）；或按上文注册 MCP 服务器 `social-media-toolkit-mcp`。示例提示词：
+
+- “把这个 B 站视频的文字提取出来并总结：SHARE_URL”
+- “给这个 YouTube 视频生成带时间码的逐字稿，输出 SRT 和 Markdown 到 ./transcripts。”
+- “抓取这条抖音的前 20 条公开评论，归纳大家常见的吐槽。”
+
+要修改本仓库？Agent 请阅读 [AGENTS.md](AGENTS.md)。
+
 ## 信任与边界
 
 | 范围 | 约定 |
@@ -354,6 +370,46 @@ git diff --check
 
 测试只能使用合成 fixture，不得包含真实 Cookie、Token、私有媒体或用户内容。
 
+## 常见问题
+
+### 怎么用命令行获取 YouTube 或 B 站视频的字幕/逐字稿？
+
+运行 `socialkit text "URL"` 得到纯文字；运行 `socialkit text "YOUTUBE_URL" --timed --output ./transcripts` 得到带时间码的 Markdown、SRT 和 JSON。它优先使用已有字幕，必要时才回退到火山引擎云端 ASR。
+
+### 怎么提取抖音或小红书链接里的文案、下载视频？
+
+`socialkit text "SHARE_URL"` 取文字，`socialkit download "SHARE_URL" --output ./downloads` 下载视频、封面和图片。两者都只用公开分享链接，无需登录。
+
+### AI Agent 能不用浏览器、Cookie 读取社交媒体内容吗？
+
+可以。CLI 和 MCP 服务器只读公开页面，Claude Code、Codex 或任何 MCP 客户端都能直接调用，无需浏览器配置、Cookie 或登录状态。
+
+### 会产生费用吗？
+
+公开元数据、媒体下载和平台原生字幕免费。可选路线可能收费：GetNote、TikHub 抖音回退和火山引擎 ASR。结果里的 `provenance` 与 `warnings` 会写明实际走了哪条路线。
+
+### API Key 放在哪里？
+
+放在进程环境变量或 MCP 客户端的密钥存储里，不要写进项目 `.env`。`socialkit doctor` 只列出它检查的密钥名称，从不输出值。
+
+### 支持哪些平台？私密内容呢？
+
+支持抖音、小红书、Bilibili 和 YouTube 的公开链接。私密内容、账号后台数据和发布功能不在范围内；平台条款与版权责任由使用者自行承担。
+
+### 支持本地 Whisper 或其他 ASR 吗？
+
+不支持。按设计，火山引擎云端 ASR 是唯一的 ASR 提供方。
+
+## 卸载
+
+```bash
+uv tool uninstall social-media-toolkit
+rm -rf ~/.claude/skills/social-media-toolkit ~/.agents/skills/social-media-toolkit   # 如果安装过 Skill
+rm -f ~/.config/social-media-toolkit/config.json                                      # 可选配置（如果创建过）
+```
+
+如果在 MCP 客户端配置里添加过 `social-media-toolkit`，请一并删除。你指定的输出目录不会被改动。
+
 ## 仓库动态
 
 [![risingjerry/social-media-toolkit 仓库动态](https://raw.githubusercontent.com/risingjerry/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/risingjerry/social-media-toolkit)
@@ -363,3 +419,7 @@ git diff --check
 欢迎通过 [GitHub Issues](https://github.com/risingjerry/social-media-toolkit/issues) 报告 Bug 或提出范围明确的功能建议。提交 Pull Request 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；发现安全问题时，请使用 [GitHub 私密漏洞报告](https://github.com/risingjerry/social-media-toolkit/security/advisories/new)。
 
 本项目采用 [Apache License 2.0](LICENSE)。
+
+如果它帮你省了时间，欢迎在 GitHub 点个 Star，让更多人找到它。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=risingjerry/social-media-toolkit&type=Date)](https://star-history.com/#risingjerry/social-media-toolkit&Date)
