@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/JNHFlow21/social-media-toolkit/actions/workflows/ci.yml"><img alt="Continuous integration status" src="https://github.com/JNHFlow21/social-media-toolkit/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/JNHFlow21/social-media-toolkit/releases"><img alt="Latest GitHub release" src="https://img.shields.io/github/v/release/JNHFlow21/social-media-toolkit?display_name=tag&sort=semver"></a>
+  <a href="https://github.com/risingjerry/social-media-toolkit/actions/workflows/ci.yml"><img alt="Continuous integration status" src="https://github.com/risingjerry/social-media-toolkit/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/risingjerry/social-media-toolkit/releases"><img alt="Latest GitHub release" src="https://img.shields.io/github/v/release/risingjerry/social-media-toolkit?display_name=tag&sort=semver"></a>
   <a href="LICENSE"><img alt="Apache 2.0 license" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
   <img alt="Python 3.10 or newer" src="https://img.shields.io/badge/python-%3E%3D3.10-3776AB.svg">
   <img alt="Node.js 18 or newer for the installer" src="https://img.shields.io/badge/installer-Node.js%20%3E%3D18-339933.svg">
@@ -31,7 +31,7 @@ Social Media Toolkit is an open-source Python SDK, `socialkit` CLI, and Model Co
 Prerequisite: Node.js 18+ with `npm` / `npx`.
 
 ```bash
-npx -y github:JNHFlow21/social-media-toolkit
+npx -y github:risingjerry/social-media-toolkit
 socialkit doctor
 ```
 
@@ -63,7 +63,7 @@ uv tool uninstall social-media-toolkit
 <summary>Source checkout for contributors</summary>
 
 ```bash
-git clone https://github.com/JNHFlow21/social-media-toolkit.git
+git clone https://github.com/risingjerry/social-media-toolkit.git
 cd social-media-toolkit
 uv sync --locked
 uv run socialkit doctor
@@ -359,10 +359,10 @@ Tests use synthetic fixtures and must not contain real cookies, tokens, private 
 
 ## Repository activity
 
-[![Repository Pulse for JNHFlow21/social-media-toolkit](https://raw.githubusercontent.com/JNHFlow21/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/JNHFlow21/social-media-toolkit)
+[![Repository Pulse for risingjerry/social-media-toolkit](https://raw.githubusercontent.com/risingjerry/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/risingjerry/social-media-toolkit)
 
 ## Contributing, support, and license
 
-Bug reports and focused feature proposals are welcome through [GitHub Issues](https://github.com/JNHFlow21/social-media-toolkit/issues). Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and use [GitHub's private vulnerability reporting](https://github.com/JNHFlow21/social-media-toolkit/security/advisories/new) for security issues.
+Bug reports and focused feature proposals are welcome through [GitHub Issues](https://github.com/risingjerry/social-media-toolkit/issues). Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and use [GitHub's private vulnerability reporting](https://github.com/risingjerry/social-media-toolkit/security/advisories/new) for security issues.
 
 Licensed under the [Apache License 2.0](LICENSE).

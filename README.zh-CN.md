@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/JNHFlow21/social-media-toolkit/actions/workflows/ci.yml"><img alt="持续集成状态" src="https://github.com/JNHFlow21/social-media-toolkit/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/JNHFlow21/social-media-toolkit/releases"><img alt="最新 GitHub Release" src="https://img.shields.io/github/v/release/JNHFlow21/social-media-toolkit?display_name=tag&sort=semver"></a>
+  <a href="https://github.com/risingjerry/social-media-toolkit/actions/workflows/ci.yml"><img alt="持续集成状态" src="https://github.com/risingjerry/social-media-toolkit/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/risingjerry/social-media-toolkit/releases"><img alt="最新 GitHub Release" src="https://img.shields.io/github/v/release/risingjerry/social-media-toolkit?display_name=tag&sort=semver"></a>
   <a href="LICENSE"><img alt="Apache 2.0 许可证" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
   <img alt="需要 Python 3.10 或更高版本" src="https://img.shields.io/badge/python-%3E%3D3.10-3776AB.svg">
   <img alt="安装器需要 Node.js 18 或更高版本" src="https://img.shields.io/badge/installer-Node.js%20%3E%3D18-339933.svg">
@@ -31,7 +31,7 @@ Social Media Toolkit 是面向开发者和 AI Agent 的开源 Python SDK、`soci
 前置条件：Node.js 18+，并带有 `npm` / `npx`。
 
 ```bash
-npx -y github:JNHFlow21/social-media-toolkit
+npx -y github:risingjerry/social-media-toolkit
 socialkit doctor
 ```
 
@@ -63,7 +63,7 @@ uv tool uninstall social-media-toolkit
 <summary>从源码安装（适合贡献者）</summary>
 
 ```bash
-git clone https://github.com/JNHFlow21/social-media-toolkit.git
+git clone https://github.com/risingjerry/social-media-toolkit.git
 cd social-media-toolkit
 uv sync --locked
 uv run socialkit doctor
@@ -356,10 +356,10 @@ git diff --check
 
 ## 仓库动态
 
-[![JNHFlow21/social-media-toolkit 仓库动态](https://raw.githubusercontent.com/JNHFlow21/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/JNHFlow21/social-media-toolkit)
+[![risingjerry/social-media-toolkit 仓库动态](https://raw.githubusercontent.com/risingjerry/social-media-toolkit/metrics/repository-metrics.svg)](https://github.com/risingjerry/social-media-toolkit)
 
 ## 贡献、支持与许可证
 
-欢迎通过 [GitHub Issues](https://github.com/JNHFlow21/social-media-toolkit/issues) 报告 Bug 或提出范围明确的功能建议。提交 Pull Request 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；发现安全问题时，请使用 [GitHub 私密漏洞报告](https://github.com/JNHFlow21/social-media-toolkit/security/advisories/new)。
+欢迎通过 [GitHub Issues](https://github.com/risingjerry/social-media-toolkit/issues) 报告 Bug 或提出范围明确的功能建议。提交 Pull Request 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；发现安全问题时，请使用 [GitHub 私密漏洞报告](https://github.com/risingjerry/social-media-toolkit/security/advisories/new)。
 
 本项目采用 [Apache License 2.0](LICENSE)。

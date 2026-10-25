@@ -3,11 +3,11 @@ message: "If you use Social Media Toolkit in published work, cite this software 
 title: "Social Media Toolkit"
 type: software
 authors:
-  - family-names: "JNHFlow21"
+  - family-names: "risingjerry"
 version: "0.4.1"
 date-released: 2026-08-26
-repository-code: "https://github.com/JNHFlow21/social-media-toolkit"
-url: "https://github.com/JNHFlow21/social-media-toolkit"
+repository-code: "https://github.com/risingjerry/social-media-toolkit"
+url: "https://github.com/risingjerry/social-media-toolkit"
 license: Apache-2.0
 keywords:
   - social media extraction

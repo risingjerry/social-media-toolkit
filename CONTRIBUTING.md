@@ -7,7 +7,7 @@ auditable, and honest.
 
 - Use a GitHub Issue for bugs, platform breakage, or a focused feature proposal.
 - Security vulnerabilities belong in a
-  [private security advisory](https://github.com/JNHFlow21/social-media-toolkit/security/advisories/new),
+  [private security advisory](https://github.com/risingjerry/social-media-toolkit/security/advisories/new),
   not a public issue.
 - Authenticated publishing, private analytics, browser automation, local ASR,
   and a second orchestration layer are outside this repository's product
@@ -23,7 +23,7 @@ Requirements:
 - `ffmpeg` only for ASR and merged-media integration testing
 
 ```bash
-git clone https://github.com/JNHFlow21/social-media-toolkit.git
+git clone https://github.com/risingjerry/social-media-toolkit.git
 cd social-media-toolkit
 uv sync --locked
 npm test

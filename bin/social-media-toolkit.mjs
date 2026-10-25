@@ -144,7 +144,7 @@ function printHelp() {
   console.log(`Social Media Toolkit one-command installer
 
 Usage:
-  npx -y github:JNHFlow21/social-media-toolkit
+  npx -y github:risingjerry/social-media-toolkit
 
 Options:
   --dry-run   Show the installation plan without changing the machine

@@ -1,7 +1,7 @@
 """MCP transport package for Social Media Toolkit."""
 
 __version__ = "0.4.1"
-__author__ = "JNHFlow21"
+__author__ = "risingjerry"
 __email__ = "JNHFlow21@users.noreply.github.com"
 
 

@@ -48,13 +48,13 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/JNHFlow21/social-media-toolkit"
-Repository = "https://github.com/JNHFlow21/social-media-toolkit"
-Issues = "https://github.com/JNHFlow21/social-media-toolkit/issues"
-Documentation = "https://github.com/JNHFlow21/social-media-toolkit#readme"
-Changelog = "https://github.com/JNHFlow21/social-media-toolkit/blob/main/CHANGELOG.md"
-Security = "https://github.com/JNHFlow21/social-media-toolkit/security/policy"
-Releases = "https://github.com/JNHFlow21/social-media-toolkit/releases"
+Homepage = "https://github.com/risingjerry/social-media-toolkit"
+Repository = "https://github.com/risingjerry/social-media-toolkit"
+Issues = "https://github.com/risingjerry/social-media-toolkit/issues"
+Documentation = "https://github.com/risingjerry/social-media-toolkit#readme"
+Changelog = "https://github.com/risingjerry/social-media-toolkit/blob/main/CHANGELOG.md"
+Security = "https://github.com/risingjerry/social-media-toolkit/security/policy"
+Releases = "https://github.com/risingjerry/social-media-toolkit/releases"
 
 [project.scripts]
 social-post-extractor-mcp = "social_post_extractor_mcp.server:main"

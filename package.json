@@ -29,12 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JNHFlow21/social-media-toolkit.git"
+    "url": "git+https://github.com/risingjerry/social-media-toolkit.git"
   },
   "bugs": {
-    "url": "https://github.com/JNHFlow21/social-media-toolkit/issues"
+    "url": "https://github.com/risingjerry/social-media-toolkit/issues"
   },
-  "homepage": "https://github.com/JNHFlow21/social-media-toolkit#readme",
+  "homepage": "https://github.com/risingjerry/social-media-toolkit#readme",
   "keywords": [
     "mcp",
     "model-context-protocol",

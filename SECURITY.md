@@ -14,7 +14,7 @@ below.
 ## Report a vulnerability privately
 
 Use
-[GitHub private vulnerability reporting](https://github.com/JNHFlow21/social-media-toolkit/security/advisories/new).
+[GitHub private vulnerability reporting](https://github.com/risingjerry/social-media-toolkit/security/advisories/new).
 Do not open a public issue containing an exploit, secret, private URL, account
 identifier, or private media.
 
